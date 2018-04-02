@@ -12,18 +12,18 @@ import com.mindorks.placeholderview.annotations.View;
 @Layout(R.layout.drawer_header)
 public class DrawerHeader {
 
-    @View(R.id.profileImageView)
-    public ImageView profileImage;
+/*    @View(R.id.profileImageView)
+    public ImageView profileImage;*/
 
     @View(R.id.nameTxt)
     public TextView nameTxt;
 
-    @View(R.id.emailTxt)
-    public TextView emailTxt;
+    /*@View(R.id.emailTxt)
+    public TextView emailTxt;*/
 
     @Resolve
     public void onResolved() {
-        nameTxt.setText("Janishar Ali");
-        emailTxt.setText("janishar.ali@gmail.com");
+        nameTxt.setText("ENI Koinonia");
+//        emailTxt.setText("janishar.ali@gmail.com");
     }
 }

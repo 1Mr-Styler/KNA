@@ -1,6 +1,7 @@
 package com.lyshnia.kna;
 
 import android.content.Context;
+import android.content.Intent;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -13,13 +14,13 @@ import com.mindorks.placeholderview.annotations.View;
 @Layout(R.layout.drawer_item)
 public class DrawerMenuItem {
 
-    public static final int DRAWER_MENU_ITEM_PROFILE = 1;
+    public static final int DRAWER_MENU_ITEM_HOME = 1;
     public static final int DRAWER_MENU_ITEM_REQUESTS = 2;
     public static final int DRAWER_MENU_ITEM_GROUPS = 3;
     public static final int DRAWER_MENU_ITEM_NOTIFICATIONS = 4;
     public static final int DRAWER_MENU_ITEM_SETTINGS = 5;
     public static final int DRAWER_MENU_ITEM_TERMS = 6;
-    public static final int DRAWER_MENU_ITEM_LOGOUT = 7;
+    public static final int DRAWER_MENU_ITEM_ABOUT = 7;
 
     public int mMenuPosition;
     public Context mContext;
@@ -39,7 +40,7 @@ public class DrawerMenuItem {
     @Resolve
     public void onResolved() {
         switch (mMenuPosition){
-            case DRAWER_MENU_ITEM_PROFILE:
+            case DRAWER_MENU_ITEM_HOME:
                 itemNameTxt.setText("Home");
                 itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_home_black_18dp));
                 break;
@@ -63,9 +64,9 @@ public class DrawerMenuItem {
                 itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_book_black_18dp));
                 itemNameTxt.setText("Downloads");
                 break;
-            case DRAWER_MENU_ITEM_LOGOUT:
+            case DRAWER_MENU_ITEM_ABOUT:
                 itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_exit_to_app_black_18dp));
-                itemNameTxt.setText("Logout");
+                itemNameTxt.setText("About App");
                 break;
         }
     }
@@ -73,8 +74,9 @@ public class DrawerMenuItem {
     @Click(R.id.mainView)
     public void onMenuItemClick(){
         switch (mMenuPosition){
-            case DRAWER_MENU_ITEM_PROFILE:
-                Toast.makeText(mContext, "Profile", Toast.LENGTH_SHORT).show();
+            case DRAWER_MENU_ITEM_HOME:
+                Intent intent = new Intent(mContext, LoginActivity.class);
+                mContext.startActivity(intent);
                 if(mCallBack != null)mCallBack.onProfileMenuSelected();
                 break;
             case DRAWER_MENU_ITEM_REQUESTS:
@@ -97,7 +99,7 @@ public class DrawerMenuItem {
                 Toast.makeText(mContext, "Terms", Toast.LENGTH_SHORT).show();
                 if(mCallBack != null)mCallBack.onTermsMenuSelected();
                 break;
-            case DRAWER_MENU_ITEM_LOGOUT:
+            case DRAWER_MENU_ITEM_ABOUT:
                 Toast.makeText(mContext, "Logout", Toast.LENGTH_SHORT).show();
                 if(mCallBack != null)mCallBack.onLogoutMenuSelected();
                 break;

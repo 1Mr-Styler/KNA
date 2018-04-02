@@ -14,7 +14,7 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        getSupportActionBar()!!.hide(); //<< this
+//        getSupportActionBar()!!.hide(); //<< this
         setContentView(R.layout.activity_login)
 
         val shape = PaintDrawable(Color.WHITE)

@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.text.Html
 import android.content.Intent
 import android.view.View
-import android.app.ProgressDialog
 import android.support.v4.widget.DrawerLayout
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.widget.Toolbar
@@ -30,20 +29,11 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        /*val dialog = ProgressDialog(this)
-        dialog.setMessage("Loading")
-        dialog.setCancelable(false)
-        dialog.setInverseBackgroundForced(false)
-        dialog.show()
-
-        dialog.hide()*/
-
         mDrawer = findViewById<DrawerLayout>(R.id.drawerLayout);
         mDrawerView = findViewById<PlaceHolderView>(R.id.drawerView);
         mToolbar = findViewById<Toolbar>(R.id.toolbar);
-        mGalleryView = findViewById<PlaceHolderView>(R.id.galleryView);
+//        mGalleryView = findViewById<PlaceHolderView>(R.id.galleryView);
         setupDrawer();
-
 
     }
 
@@ -55,13 +45,13 @@ class MainActivity : AppCompatActivity() {
     private fun setupDrawer() {
         mDrawerView!!
                 .addView(DrawerHeader())
-                .addView(DrawerMenuItem(this.applicationContext, DrawerMenuItem.DRAWER_MENU_ITEM_PROFILE))
+                .addView(DrawerMenuItem(this.applicationContext, DrawerMenuItem.DRAWER_MENU_ITEM_HOME))
                 .addView(DrawerMenuItem(this.applicationContext, DrawerMenuItem.DRAWER_MENU_ITEM_REQUESTS))
                 .addView(DrawerMenuItem(this.applicationContext, DrawerMenuItem.DRAWER_MENU_ITEM_GROUPS))
                 .addView(DrawerMenuItem(this.applicationContext, DrawerMenuItem.DRAWER_MENU_ITEM_NOTIFICATIONS))
                 .addView(DrawerMenuItem(this.applicationContext, DrawerMenuItem.DRAWER_MENU_ITEM_TERMS))
                 .addView(DrawerMenuItem(this.applicationContext, DrawerMenuItem.DRAWER_MENU_ITEM_SETTINGS))
-                .addView(DrawerMenuItem(this.applicationContext, DrawerMenuItem.DRAWER_MENU_ITEM_LOGOUT))
+                .addView(DrawerMenuItem(this.applicationContext, DrawerMenuItem.DRAWER_MENU_ITEM_ABOUT))
 
         val drawerToggle = object : ActionBarDrawerToggle(this, mDrawer, mToolbar, R.string.open_drawer, R.string.close_drawer) {
             override fun onDrawerOpened(drawerView: View) {
