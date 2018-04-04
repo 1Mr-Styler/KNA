@@ -19,4 +19,7 @@
     <string name="hour">Hour</string>
     <string name="minute">Minute</string>
     <string name="second">Second</string>
+    <string name="happy_birthday">Happy Birthday</string>
+    <string name="cake">Cake</string>
+    <string name="birthdays_this_month">birthdays this month</string>
 </resources>
