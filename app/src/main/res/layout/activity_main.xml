@@ -246,8 +246,9 @@
                         android:layout_height="154dp"
                         android:layout_margin="10dp"
                         android:background="#D066FA"
-                        app:cardCornerRadius="2dp"
+                        android:onClick="tweets"
 
+                        app:cardCornerRadius="2dp"
                         app:cardElevation="10dp">
 
                         <RelativeLayout

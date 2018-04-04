@@ -20,6 +20,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 import android.support.v4.widget.SwipeRefreshLayout
 import com.lyshnia.kna.HomePage.Bulletin
+import com.lyshnia.kna.HomePage.Tweets
 
 
 class MainActivity : AppCompatActivity() {
@@ -88,6 +89,10 @@ class MainActivity : AppCompatActivity() {
 
     fun bulletin(v: View) {
         val intent = Intent(this, Bulletin::class.java)
+        startActivity(intent)
+    }
+    fun tweets(v: View) {
+        val intent = Intent(this, Tweets::class.java)
         startActivity(intent)
     }
 
