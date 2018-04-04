@@ -75,7 +75,7 @@ public class DrawerMenuItem {
     public void onMenuItemClick(){
         switch (mMenuPosition){
             case DRAWER_MENU_ITEM_HOME:
-                Intent intent = new Intent(mContext, LoginActivity.class);
+                Intent intent = new Intent(mContext, MainActivity.class);
                 mContext.startActivity(intent);
                 if(mCallBack != null)mCallBack.onProfileMenuSelected();
                 break;

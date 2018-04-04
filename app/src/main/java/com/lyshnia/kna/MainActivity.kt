@@ -19,6 +19,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import java.text.SimpleDateFormat
 import java.util.*
 import android.support.v4.widget.SwipeRefreshLayout
+import com.lyshnia.kna.HomePage.Bulletin
 
 
 class MainActivity : AppCompatActivity() {
@@ -82,6 +83,11 @@ class MainActivity : AppCompatActivity() {
 
     fun loginActivity(v: View) {
         val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun bulletin(v: View) {
+        val intent = Intent(this, Bulletin::class.java)
         startActivity(intent)
     }
 

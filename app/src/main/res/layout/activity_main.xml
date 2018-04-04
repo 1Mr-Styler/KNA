@@ -204,11 +204,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="142dp"
                         android:layout_margin="10dp"
-                        app:cardCornerRadius="2dp"
+                        android:onClick="bulletin"
 
+                        app:cardCornerRadius="2dp"
                         app:cardElevation="10dp">
 
                         <RelativeLayout
+                            android:id="@+id/card_bulletin"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="#D066FA">
