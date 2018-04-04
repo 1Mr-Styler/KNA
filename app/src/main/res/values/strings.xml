@@ -3,4 +3,20 @@
     <string name="home">Koinonia</string>
     <string name="open_drawer">Drawer Open</string>
     <string name="close_drawer">Drawer Close</string>
+    <string name="ctd_timer">Time Till Next Event:</string>
+    <string name="ctd_timer_running">Service in Progress</string>
+    <string name="event_ongoing">Opening Prayers</string>
+    <string name="bulletin">BULLETIN</string>
+    <string name="tweets">TWEETS</string>
+    <string name="birthdays">BIRTHDAYS</string>
+    <string name="weddings">WEDDINGS</string>
+    <string name="bulletin_btn_desc">Bulletin</string>
+    <string name="tweets_btn_desc">Tweets</string>
+    <string name="birthdays_btn_desc">Birthdays</string>
+    <string name="weddings_btn_desc">Weddings</string>
+    <string name="_00">00</string>
+    <string name="days">Days</string>
+    <string name="hour">Hour</string>
+    <string name="minute">Minute</string>
+    <string name="second">Second</string>
 </resources>
