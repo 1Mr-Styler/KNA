@@ -27,6 +27,7 @@
             app:srcCompat="@drawable/birthday_bg" />
 
         <android.support.v7.widget.CardView
+            android:id="@+id/cardView2"
             android:layout_width="368dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -52,8 +53,8 @@
                     android:layout_alignParentTop="true"
                     android:layout_marginLeft="11dp"
                     android:layout_marginStart="11dp"
-                    app:srcCompat="@drawable/cake_black"
-                    android:contentDescription="@string/cake" />
+                    android:contentDescription="@string/cake"
+                    app:srcCompat="@drawable/cake_black" />
 
 
                 <TextView
@@ -82,16 +83,193 @@
                     android:layout_width="78dp"
                     android:layout_height="86dp"
                     android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginEnd="11dp"
-                    app:srcCompat="@drawable/cake_black"
-                    android:contentDescription="@string/cake"
                     android:layout_marginRight="11dp"
-                    android:layout_alignParentRight="true" />
+                    android:contentDescription="@string/cake"
+                    app:srcCompat="@drawable/cake_black" />
 
 
             </RelativeLayout>
         </android.support.v7.widget.CardView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="154dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView2"
+            app:layout_constraintVertical_bias="0.0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/birthday_scroll"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="176dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="11dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/bdayName1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="casual"
+                            android:text="1. Jerry U."
+                            android:textColor="@color/cardview_dark_background"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/bdayName2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="casual"
+                            android:text="2. Stanley N."
+                            android:textColor="@color/cardview_dark_background"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/bdayName3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="casual"
+                            android:text="3. Sarah C."
+                            android:textColor="@color/cardview_dark_background"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/bdayName4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="casual"
+                            android:text="4. Victor S."
+                            android:textColor="@color/cardview_dark_background"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/bdayName5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="casual"
+                            android:text="5. Sia P."
+                            android:textColor="@color/cardview_dark_background"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/bdayName6"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="casual"
+                            android:text="6. Livina G."
+                            android:textColor="@color/cardview_dark_background"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/bdayName7"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="casual"
+                            android:text="7. Simon C."
+                            android:textColor="@color/cardview_dark_background"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/bdayName8"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="casual"
+                            android:text="8. Olivia M."
+                            android:textColor="@color/cardview_dark_background"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/bdayName9"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="casual"
+                            android:text="9. Sean P."
+                            android:textColor="@color/cardview_dark_background"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/bdayName10"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="casual"
+                            android:text="10. Jennifer G."
+                            android:textColor="@color/cardview_dark_background"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/bdayName11"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="casual"
+                            android:gravity="center"
+                            android:text="11. Ademola S."
+                            android:textColor="@color/cardview_dark_background"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
 
     </android.support.constraint.ConstraintLayout>
 
