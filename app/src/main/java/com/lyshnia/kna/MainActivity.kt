@@ -22,6 +22,7 @@ import android.support.v4.widget.SwipeRefreshLayout
 import com.lyshnia.kna.HomePage.Birthdays
 import com.lyshnia.kna.HomePage.Bulletin
 import com.lyshnia.kna.HomePage.Tweets
+import com.lyshnia.kna.HomePage.Weddings
 
 
 class MainActivity : AppCompatActivity() {
@@ -83,11 +84,6 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun loginActivity(v: View) {
-        val intent = Intent(this, LoginActivity::class.java)
-        startActivity(intent)
-    }
-
     fun bulletin(v: View) {
         val intent = Intent(this, Bulletin::class.java)
         startActivity(intent)
@@ -98,6 +94,10 @@ class MainActivity : AppCompatActivity() {
     }
     fun birthdays(v: View) {
         val intent = Intent(this, Birthdays::class.java)
+        startActivity(intent)
+    }
+    fun weddings(v: View) {
+        val intent = Intent(this, Weddings::class.java)
         startActivity(intent)
     }
 
