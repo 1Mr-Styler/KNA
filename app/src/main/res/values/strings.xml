@@ -24,4 +24,5 @@
     <string name="birthdays_this_month">birthdays this month</string>
     <string name="weddings_background_image">Weddings Background Image</string>
     <string name="weddings_this_year">Weddings this year</string>
+    <string name="date_image">Date Image</string>
 </resources>

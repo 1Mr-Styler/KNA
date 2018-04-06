@@ -23,7 +23,8 @@
         <activity android:name=".HomePage.Bulletin" />
         <activity android:name=".HomePage.Tweets" />
         <activity android:name=".HomePage.Birthdays" />
-        <activity android:name=".HomePage.Weddings"></activity>
+        <activity android:name=".HomePage.Weddings" />
+        <activity android:name=".Events.Events"></activity>
     </application>
 
 </manifest>
