@@ -62,7 +62,7 @@ class EventSingle : AppCompatActivity() {
         ViewCompat.setTransitionName(findViewById(R.id.app_bar_layout), R.drawable.events_bg.toString())
         supportPostponeEnterTransition()
 
-        setSupportActionBar(findViewById(R.id.toolbar) as Toolbar)
+        setSupportActionBar(findViewById(R.id.toolbar))
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
         val itemTitle = jsonData.getString("title")
