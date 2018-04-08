@@ -1,5 +1,6 @@
 package com.lyshnia.kna.Events
 
+import android.content.Intent
 import android.content.res.ColorStateList
 import android.graphics.drawable.BitmapDrawable
 import android.os.Build
@@ -7,6 +8,8 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.design.widget.CollapsingToolbarLayout
 import android.support.design.widget.FloatingActionButton
+import android.support.v4.app.ActivityCompat
+import android.support.v4.app.ActivityOptionsCompat
 import android.support.v4.view.ViewCompat
 import android.support.v7.graphics.Palette
 import android.support.v7.widget.Toolbar
@@ -31,6 +34,16 @@ class EventSingle : AppCompatActivity() {
     private val EXTRA_TITLE = "com.lyshnia.kna.extraTitle"
     private lateinit var collapsingToolbarLayout: CollapsingToolbarLayout
     private lateinit var jsonData: JSONObject
+
+    companion object {
+
+        fun navigate(activity: AppCompatActivity, transitionImage: View) {
+            val intent = Intent(activity, EventSingle::class.java)
+
+            val options = ActivityOptionsCompat.makeSceneTransitionAnimation(activity, transitionImage, R.drawable.events_bg.toString())
+            ActivityCompat.startActivity(activity, intent, options.toBundle())
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -60,7 +73,6 @@ class EventSingle : AppCompatActivity() {
         val image = findViewById(R.id.image) as ImageView
 
         Picasso.get().load(R.drawable.events_bg).into(image, object : Callback {
-
 
             override fun onSuccess() {
                 val bitmap = (image.drawable as BitmapDrawable).bitmap

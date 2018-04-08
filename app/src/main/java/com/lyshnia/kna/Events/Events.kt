@@ -108,8 +108,11 @@ class Events : AppCompatActivity(), RecyclerAdapter.ItemClickListener {
         val file = File(letDirectory, "temp_evt.json")
         file.writeText(JSONObject(buls.get(position)).toString())
 
-        val intent = Intent(this, EventSingle::class.java)
-        startActivity(intent)
+//        val intent = Intent(this, EventSingle::class.java)
+//        startActivity(intent)
+
+        EventSingle.navigate(this, view.findViewById(R.id.imageView6))
+
     }
 
     private fun setupDrawer() {
