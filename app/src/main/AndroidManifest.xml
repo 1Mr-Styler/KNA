@@ -24,7 +24,8 @@
         <activity android:name=".HomePage.Tweets" />
         <activity android:name=".HomePage.Birthdays" />
         <activity android:name=".HomePage.Weddings" />
-        <activity android:name=".Events.Events"></activity>
+        <activity android:name=".Events.Events" />
+        <activity android:name=".Events.EventSingle" android:theme="@style/AppTheme2" />
     </application>
 
 </manifest>

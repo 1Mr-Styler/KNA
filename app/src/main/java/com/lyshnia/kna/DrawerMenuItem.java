@@ -2,6 +2,7 @@ package com.lyshnia.kna;
 
 import android.content.Context;
 import android.content.Intent;
+import android.support.v4.app.NavUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -83,7 +84,7 @@ public class DrawerMenuItem {
             case DRAWER_MENU_ITEM_REQUESTS:
                 intent = new Intent(mContext, Events.class);
                 mContext.startActivity(intent);
-                if(mCallBack != null)mCallBack.onProfileMenuSelected();
+                if(mCallBack != null)mCallBack.onEventsMenuSelected();
                 break;
             case DRAWER_MENU_ITEM_GROUPS:
                 Toast.makeText(mContext, "Groups", Toast.LENGTH_SHORT).show();
@@ -114,7 +115,7 @@ public class DrawerMenuItem {
 
     public interface DrawerCallBack{
         void onProfileMenuSelected();
-        void onRequestMenuSelected();
+        void onEventsMenuSelected();
         void onGroupsMenuSelected();
         void onNotificationsMenuSelected();
         void onSettingsMenuSelected();
