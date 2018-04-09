@@ -52,8 +52,8 @@ class Birthdays : AppCompatActivity() {
         mDrawerView!!
                 .addView(DrawerHeader())
                 .addView(DrawerMenuItem(this, DrawerMenuItem.DRAWER_MENU_ITEM_HOME))
-                .addView(DrawerMenuItem(this, DrawerMenuItem.DRAWER_MENU_ITEM_REQUESTS))
-                .addView(DrawerMenuItem(this, DrawerMenuItem.DRAWER_MENU_ITEM_GROUPS))
+                .addView(DrawerMenuItem(this, DrawerMenuItem.DRAWER_MENU_ITEM_EVENTS))
+                .addView(DrawerMenuItem(this, DrawerMenuItem.DRAWER_MENU_ITEM_SERMONS))
                 .addView(DrawerMenuItem(this, DrawerMenuItem.DRAWER_MENU_ITEM_NOTIFICATIONS))
                 .addView(DrawerMenuItem(this, DrawerMenuItem.DRAWER_MENU_ITEM_TERMS))
                 .addView(DrawerMenuItem(this, DrawerMenuItem.DRAWER_MENU_ITEM_SETTINGS))

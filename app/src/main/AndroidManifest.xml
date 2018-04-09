@@ -25,7 +25,10 @@
         <activity android:name=".HomePage.Birthdays" />
         <activity android:name=".HomePage.Weddings" />
         <activity android:name=".Events.Events" />
-        <activity android:name=".Events.EventSingle" android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".Events.EventSingle"
+            android:theme="@style/AppTheme2" />
+        <activity android:name=".Sermons.Sermons"></activity>
     </application>
 
 </manifest>

@@ -1,6 +1,5 @@
 package com.lyshnia.kna.HomePage
 
-import android.app.PendingIntent.getActivity
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.widget.DrawerLayout
@@ -8,24 +7,16 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.Toolbar
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import android.widget.TextView
-import android.widget.Toast
 import com.lyshnia.kna.DrawerHeader
 import com.lyshnia.kna.DrawerMenuItem
 import com.lyshnia.kna.R
 import com.mindorks.placeholderview.PlaceHolderView
-import kotlinx.android.synthetic.main.activity_bulletin.*
-import com.lyshnia.kna.R.id.recyclerView
 import android.support.v7.widget.DividerItemDecoration
 import android.util.Log
-import com.lyshnia.kna.R.attr.layoutManager
 import kotlinx.android.synthetic.main.toolbar_home.*
 import android.content.Intent
 import android.net.Uri
-import com.lyshnia.kna.R.id.recyclerView
 import android.support.v4.content.ContextCompat
 
 
@@ -117,8 +108,8 @@ class Bulletin : AppCompatActivity(), RecyclerAdapter.ItemClickListener {
         mDrawerView!!
                 .addView(DrawerHeader())
                 .addView(DrawerMenuItem(this, DrawerMenuItem.DRAWER_MENU_ITEM_HOME))
-                .addView(DrawerMenuItem(this, DrawerMenuItem.DRAWER_MENU_ITEM_REQUESTS))
-                .addView(DrawerMenuItem(this, DrawerMenuItem.DRAWER_MENU_ITEM_GROUPS))
+                .addView(DrawerMenuItem(this, DrawerMenuItem.DRAWER_MENU_ITEM_EVENTS))
+                .addView(DrawerMenuItem(this, DrawerMenuItem.DRAWER_MENU_ITEM_SERMONS))
                 .addView(DrawerMenuItem(this, DrawerMenuItem.DRAWER_MENU_ITEM_NOTIFICATIONS))
                 .addView(DrawerMenuItem(this, DrawerMenuItem.DRAWER_MENU_ITEM_TERMS))
                 .addView(DrawerMenuItem(this, DrawerMenuItem.DRAWER_MENU_ITEM_SETTINGS))
