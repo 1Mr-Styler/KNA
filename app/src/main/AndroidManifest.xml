@@ -28,7 +28,10 @@
         <activity
             android:name=".Events.EventSingle"
             android:theme="@style/AppTheme2" />
-        <activity android:name=".Sermons.Sermons"></activity>
+        <activity
+            android:name=".Sermons.Sermons"
+            android:label="@string/title_activity_sermons"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>
