@@ -141,7 +141,9 @@ class Sermons : AppCompatActivity(), SearchView.OnQueryTextListener {
     }
 
     override fun onQueryTextSubmit(query: String?): Boolean {
-        Log.i("REF", query)
+        if(query != null) {
+            Toast.makeText(this, "No results found for \"${query}\"", Toast.LENGTH_SHORT).show()
+        }
 
         return true
     }

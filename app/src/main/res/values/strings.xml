@@ -34,5 +34,5 @@
     <string name="tab_text_2">Categories</string>
     <string name="tab_text_3">Preacher</string>
     <string name="action_search">Search</string>
-    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="section_format">Current Selection: %1$d</string>
 </resources>
