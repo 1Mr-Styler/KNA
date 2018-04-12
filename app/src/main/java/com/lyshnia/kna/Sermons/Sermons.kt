@@ -1,5 +1,6 @@
 package com.lyshnia.kna.Sermons
 
+import android.content.Intent
 import android.support.design.widget.TabLayout
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
@@ -14,12 +15,19 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import com.lyshnia.kna.MainActivity
 
 import com.lyshnia.kna.R
 import kotlinx.android.synthetic.main.activity_sermons.*
 import kotlinx.android.synthetic.main.fragment_sermons.view.*
+import com.lyshnia.kna.R.string.action_search
+import android.support.v4.view.MenuItemCompat
+import android.support.v7.widget.SearchView
+import android.util.Log
+import android.widget.Toast
 
-class Sermons : AppCompatActivity() {
+
+class Sermons : AppCompatActivity(), SearchView.OnQueryTextListener {
 
     /**
      * The [android.support.v4.view.PagerAdapter] that will provide
@@ -47,8 +55,8 @@ class Sermons : AppCompatActivity() {
         tabs.addOnTabSelectedListener(TabLayout.ViewPagerOnTabSelectedListener(container))
 
         fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
 
     }
@@ -57,7 +65,14 @@ class Sermons : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.menu_sermons, menu)
-        return true
+
+        // Associate searchable configuration with the SearchView
+        // SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+        val searchView = MenuItemCompat.getActionView(menu.findItem(R.id.action_search)) as SearchView
+        // searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+        searchView.setOnQueryTextListener(this)
+
+        return super.onCreateOptionsMenu(menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -66,7 +81,7 @@ class Sermons : AppCompatActivity() {
         // as you specify a parent activity in AndroidManifest.xml.
         val id = item.itemId
 
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_search) {
             return true
         }
 
@@ -123,5 +138,16 @@ class Sermons : AppCompatActivity() {
                 return fragment
             }
         }
+    }
+
+    override fun onQueryTextSubmit(query: String?): Boolean {
+        Log.i("REF", query)
+
+        return true
+    }
+
+    override fun onQueryTextChange(newText: String?): Boolean {
+        return true
+
     }
 }

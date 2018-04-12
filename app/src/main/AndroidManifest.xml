@@ -31,7 +31,7 @@
         <activity
             android:name=".Sermons.Sermons"
             android:label="@string/title_activity_sermons"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/MyHoloLightTheme"/>
     </application>
 
 </manifest>
