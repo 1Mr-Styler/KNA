@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
     private var mToolbar: Toolbar? = null
     private var mGalleryView: PlaceHolderView? = null
 
-    private var EVENT_DATE_TIME = "2018-04-07 07:39:00"
+    private var EVENT_DATE_TIME = "2018-04-16 07:39:00"
     private val DATE_FORMAT = "yyyy-MM-dd HH:mm:ss"
     private var linear_layout_1: LinearLayout? = null
     private var linear_layout_2: LinearLayout? = null
@@ -72,11 +72,10 @@ class MainActivity : AppCompatActivity() {
 
         swiperefresh.setOnRefreshListener(
                 SwipeRefreshLayout.OnRefreshListener {
-                    Log.i("REF", "onRefresh called from SwipeRefreshLayout")
 
                     // This method performs the actual data-refresh operation.
                     // The method calls setRefreshing(false) when it's finished.
-                    EVENT_DATE_TIME = "2018-04-04 15:33:00"
+//                    EVENT_DATE_TIME = "2018-04-04 15:33:00"
                     this@MainActivity.countDownStart();
                     swiperefresh.setRefreshing(false)
                 }

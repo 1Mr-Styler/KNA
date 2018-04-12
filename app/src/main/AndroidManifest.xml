@@ -33,7 +33,11 @@
         <activity android:name=".Events.Events" />
         <activity
             android:name=".Events.EventSingle"
-            android:theme="@style/AppTheme2" />
+            android:theme="@style/AppTheme2">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lyshnia.kna.Events.Events" />
+        </activity>
         <activity
             android:name=".Sermons.Sermons"
             android:label="@string/title_activity_sermons"
