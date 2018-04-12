@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 import com.lyshnia.kna.Events.Events;
 import com.lyshnia.kna.Sermons.Sermons;
+import com.lyshnia.kna.Settings.SettingsActivity;
 import com.mindorks.placeholderview.annotations.Click;
 import com.mindorks.placeholderview.annotations.Layout;
 import com.mindorks.placeholderview.annotations.Resolve;
@@ -96,7 +97,8 @@ public class DrawerMenuItem {
                 if (mCallBack != null) mCallBack.onNotificationsMenuSelected();
                 break;
             case DRAWER_MENU_ITEM_SETTINGS:
-                Toast.makeText(mContext, "Settings", Toast.LENGTH_SHORT).show();
+                intent = new Intent(mContext, SettingsActivity.class);
+                mContext.startActivity(intent);
                 if (mCallBack != null) mCallBack.onSettingsMenuSelected();
                 break;
             case DRAWER_MENU_ITEM_TERMS:
