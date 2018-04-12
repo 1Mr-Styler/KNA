@@ -112,4 +112,5 @@
     <string name="title_activity_bulletins">Bulletins</string>
     <string name="copy_right" translatable="false">Copyright Lyshnia Limited %1$d</string>
     <string name="about_desc" translatable="false">Official App for Koinonia a place of intimacy with God organised by Eternity Network International where people experience WORSHIP, WORD, MIRACLES and LOVE.</string>
+    <string name="live_radio_text">Live Radio</string>
 </resources>

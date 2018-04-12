@@ -122,6 +122,7 @@ class Events : AppCompatActivity(), RecyclerAdapter.ItemClickListener {
                 .addView(DrawerMenuItem(this, DrawerMenuItem.DRAWER_MENU_ITEM_NOTIFICATIONS))
                 .addView(DrawerMenuItem(this, DrawerMenuItem.DRAWER_MENU_ITEM_DOWNLOADS))
                 .addView(DrawerMenuItem(this, DrawerMenuItem.DRAWER_MENU_ITEM_SETTINGS))
+                .addView(DrawerMenuItem(this, DrawerMenuItem.DRAWER_MENU_ITEM_LIVESTREAM))
                 .addView(DrawerMenuItem(this, DrawerMenuItem.DRAWER_MENU_ITEM_ABOUT))
 
         val drawerToggle = object : ActionBarDrawerToggle(this, mDrawer, mToolbar, R.string.open_drawer, R.string.close_drawer) {

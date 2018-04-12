@@ -25,6 +25,7 @@ public class DrawerMenuItem {
     public static final int DRAWER_MENU_ITEM_SETTINGS = 5;
     public static final int DRAWER_MENU_ITEM_DOWNLOADS = 6;
     public static final int DRAWER_MENU_ITEM_ABOUT = 7;
+    public static final int DRAWER_MENU_ITEM_LIVESTREAM = 8;
 
     public int mMenuPosition;
     public Context mContext;
@@ -67,6 +68,10 @@ public class DrawerMenuItem {
             case DRAWER_MENU_ITEM_DOWNLOADS:
                 itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_book_black_18dp));
                 itemNameTxt.setText("Downloads");
+                break;
+            case DRAWER_MENU_ITEM_LIVESTREAM:
+                itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_radio_black_18dp));
+                itemNameTxt.setText(R.string.live_radio_text);
                 break;
             case DRAWER_MENU_ITEM_ABOUT:
                 itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_exit_to_app_black_18dp));
@@ -112,6 +117,10 @@ public class DrawerMenuItem {
                 mContext.startActivity(intent);
                 if (mCallBack != null) mCallBack.onLogoutMenuSelected();
                 break;
+            case DRAWER_MENU_ITEM_LIVESTREAM:
+                Toast.makeText(mContext, "No Ongoing Broadcast", Toast.LENGTH_SHORT).show();
+                if (mCallBack != null) mCallBack.onLRMenuSelected();
+                break;
         }
     }
 
@@ -133,5 +142,6 @@ public class DrawerMenuItem {
         void onTermsMenuSelected();
 
         void onLogoutMenuSelected();
+        void onLRMenuSelected();
     }
 }
