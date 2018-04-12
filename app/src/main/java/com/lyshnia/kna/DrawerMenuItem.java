@@ -92,7 +92,7 @@ public class DrawerMenuItem {
                 if (mCallBack != null) mCallBack.onGroupsMenuSelected();
                 break;
             case DRAWER_MENU_ITEM_NOTIFICATIONS:
-                Toast.makeText(mContext, "Notifications", Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, "No New Notifications", Toast.LENGTH_SHORT).show();
                 if (mCallBack != null) mCallBack.onNotificationsMenuSelected();
                 break;
             case DRAWER_MENU_ITEM_SETTINGS:
