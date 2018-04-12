@@ -76,7 +76,7 @@ class MainActivity : AppCompatActivity() {
                     // This method performs the actual data-refresh operation.
                     // The method calls setRefreshing(false) when it's finished.
 //                    EVENT_DATE_TIME = "2018-04-04 15:33:00"
-//                    this@MainActivity.countDownStart();
+                    this@MainActivity.countDownStart();
                     swiperefresh.setRefreshing(false)
                 }
         )

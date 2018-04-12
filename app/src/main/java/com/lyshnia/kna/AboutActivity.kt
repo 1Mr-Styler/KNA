@@ -16,7 +16,7 @@ class AboutActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        simulateDayNight(/* DAY */1)
+        simulateDayNight(/* DAY */3)
 
         val aboutPage = AboutPage(this)
                 .isRTL(false)
