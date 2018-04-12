@@ -92,7 +92,7 @@ class EventSingle : AppCompatActivity() {
         findViewById<TextView>(R.id.att).text = jsonData.getString("att")
 
         fab.setOnClickListener {
-            Toast.makeText(this, "Hey daddy!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "You've been added to the reservation list", Toast.LENGTH_SHORT).show()
         }
     }
 
