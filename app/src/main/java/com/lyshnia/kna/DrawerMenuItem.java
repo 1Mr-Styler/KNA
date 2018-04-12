@@ -6,6 +6,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.lyshnia.kna.Downloads.Downloads;
 import com.lyshnia.kna.Events.Events;
 import com.lyshnia.kna.Sermons.Sermons;
 import com.lyshnia.kna.Settings.SettingsActivity;
@@ -22,7 +23,7 @@ public class DrawerMenuItem {
     public static final int DRAWER_MENU_ITEM_SERMONS = 3;
     public static final int DRAWER_MENU_ITEM_NOTIFICATIONS = 4;
     public static final int DRAWER_MENU_ITEM_SETTINGS = 5;
-    public static final int DRAWER_MENU_ITEM_TERMS = 6;
+    public static final int DRAWER_MENU_ITEM_DOWNLOADS = 6;
     public static final int DRAWER_MENU_ITEM_ABOUT = 7;
 
     public int mMenuPosition;
@@ -63,7 +64,7 @@ public class DrawerMenuItem {
                 itemNameTxt.setText("Settings");
                 itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_settings_black_18dp));
                 break;
-            case DRAWER_MENU_ITEM_TERMS:
+            case DRAWER_MENU_ITEM_DOWNLOADS:
                 itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_book_black_18dp));
                 itemNameTxt.setText("Downloads");
                 break;
@@ -101,8 +102,9 @@ public class DrawerMenuItem {
                 mContext.startActivity(intent);
                 if (mCallBack != null) mCallBack.onSettingsMenuSelected();
                 break;
-            case DRAWER_MENU_ITEM_TERMS:
-                Toast.makeText(mContext, "Terms", Toast.LENGTH_SHORT).show();
+            case DRAWER_MENU_ITEM_DOWNLOADS:
+                intent = new Intent(mContext, Downloads.class);
+                mContext.startActivity(intent);
                 if (mCallBack != null) mCallBack.onTermsMenuSelected();
                 break;
             case DRAWER_MENU_ITEM_ABOUT:

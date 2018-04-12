@@ -31,11 +31,24 @@
         <activity
             android:name=".Sermons.Sermons"
             android:label="@string/title_activity_sermons"
-            android:theme="@style/MyHoloLightTheme" />
+            android:theme="@style/MyHoloLightTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lyshnia.kna.MainActivity" />
+        </activity>
         <activity
             android:name=".Settings.SettingsActivity"
             android:label="@string/title_activity_settings"
             android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lyshnia.kna.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Downloads.Downloads"
+            android:label="@string/title_activity_downloads"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.lyshnia.kna.MainActivity" />
