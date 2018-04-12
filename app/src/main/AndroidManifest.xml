@@ -2,11 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.lyshnia.kna">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
+        android:screenOrientation="nosensor"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
@@ -16,9 +19,51 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".LoginActivity" />
         <activity
-            android:name=".LoginActivity"
-            ></activity>
+            android:name=".HomePage.Bulletin"
+            android:label="@string/title_activity_bulletins">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lyshnia.kna.MainActivity" />
+        </activity>
+        <activity android:name=".HomePage.Tweets" />
+        <activity android:name=".HomePage.Birthdays" />
+        <activity android:name=".HomePage.Weddings" />
+        <activity android:name=".Events.Events" />
+        <activity
+            android:name=".Events.EventSingle"
+            android:theme="@style/AppTheme2">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lyshnia.kna.Events.Events" />
+        </activity>
+        <activity
+            android:name=".Sermons.Sermons"
+            android:label="@string/title_activity_sermons"
+            android:theme="@style/MyHoloLightTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lyshnia.kna.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Settings.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lyshnia.kna.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Downloads.Downloads"
+            android:label="@string/title_activity_downloads"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lyshnia.kna.MainActivity" />
+        </activity>
+        <activity android:name=".AboutActivity"></activity>
     </application>
 
 </manifest>
