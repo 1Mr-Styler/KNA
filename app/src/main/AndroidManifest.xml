@@ -20,7 +20,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".LoginActivity" />
-        <activity android:name=".HomePage.Bulletin" />
+        <activity android:name=".HomePage.Bulletin" android:label="@string/title_activity_bulletins">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lyshnia.kna.MainActivity" />
+        </activity>
         <activity android:name=".HomePage.Tweets" />
         <activity android:name=".HomePage.Birthdays" />
         <activity android:name=".HomePage.Weddings" />

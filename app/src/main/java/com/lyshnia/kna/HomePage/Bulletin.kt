@@ -18,17 +18,10 @@ import kotlinx.android.synthetic.main.toolbar_home.*
 import android.content.Intent
 import android.net.Uri
 import android.support.v4.content.ContextCompat
-
-
-
-
+import kotlinx.android.synthetic.main.activity_downloads.*
 
 
 class Bulletin : AppCompatActivity(), RecyclerAdapter.ItemClickListener {
-
-    private var mDrawerView: PlaceHolderView? = null
-    private var mDrawer: DrawerLayout? = null
-    private var mToolbar: Toolbar? = null
 
     var adapter: RecyclerAdapter? = null
 
@@ -37,12 +30,8 @@ class Bulletin : AppCompatActivity(), RecyclerAdapter.ItemClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bulletin)
 
-        toolbarTitle.text = "Bulletins"
-
-        mDrawer = findViewById<DrawerLayout>(R.id.drawerLayout);
-        mDrawerView = findViewById<PlaceHolderView>(R.id.drawerView);
-        mToolbar = findViewById<Toolbar>(R.id.toolbar);
-        setupDrawer();
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         // data to populate the RecyclerView with
         var listItems = ArrayList<HashMap<String, String>>();
@@ -104,28 +93,5 @@ class Bulletin : AppCompatActivity(), RecyclerAdapter.ItemClickListener {
         startActivity(browserIntent)
     }
 
-    private fun setupDrawer() {
-        mDrawerView!!
-                .addView(DrawerHeader())
-                .addView(DrawerMenuItem(this, DrawerMenuItem.DRAWER_MENU_ITEM_HOME))
-                .addView(DrawerMenuItem(this, DrawerMenuItem.DRAWER_MENU_ITEM_EVENTS))
-                .addView(DrawerMenuItem(this, DrawerMenuItem.DRAWER_MENU_ITEM_SERMONS))
-                .addView(DrawerMenuItem(this, DrawerMenuItem.DRAWER_MENU_ITEM_NOTIFICATIONS))
-                .addView(DrawerMenuItem(this, DrawerMenuItem.DRAWER_MENU_ITEM_DOWNLOADS))
-                .addView(DrawerMenuItem(this, DrawerMenuItem.DRAWER_MENU_ITEM_SETTINGS))
-                .addView(DrawerMenuItem(this, DrawerMenuItem.DRAWER_MENU_ITEM_ABOUT))
 
-        val drawerToggle = object : ActionBarDrawerToggle(this, mDrawer, mToolbar, R.string.open_drawer, R.string.close_drawer) {
-            override fun onDrawerOpened(drawerView: View) {
-                super.onDrawerOpened(drawerView)
-            }
-
-            override fun onDrawerClosed(drawerView: View) {
-                super.onDrawerClosed(drawerView)
-            }
-        }
-
-        mDrawer!!.addDrawerListener(drawerToggle)
-        drawerToggle.syncState()
-    }
 }

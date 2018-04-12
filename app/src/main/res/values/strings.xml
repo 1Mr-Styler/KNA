@@ -109,4 +109,5 @@
 
     <string name="pref_title_vibrate">Vibrate</string>
     <string name="title_activity_downloads">Downloads</string>
+    <string name="title_activity_bulletins">Bulletins</string>
 </resources>
