@@ -108,7 +108,8 @@ public class DrawerMenuItem {
                 if (mCallBack != null) mCallBack.onTermsMenuSelected();
                 break;
             case DRAWER_MENU_ITEM_ABOUT:
-                Toast.makeText(mContext, "Logout", Toast.LENGTH_SHORT).show();
+                intent = new Intent(mContext, AboutActivity.class);
+                mContext.startActivity(intent);
                 if (mCallBack != null) mCallBack.onLogoutMenuSelected();
                 break;
         }
